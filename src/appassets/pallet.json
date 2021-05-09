@@ -1,0 +1,17 @@
+{
+  "VANILLA": {
+    "ITEMS": {
+      "WHITE": "#FFFF",
+      "YELLOW": "#FDFF92",
+      "GREEN": "#92FF9D",
+      "CYAN": "#92FFEB",
+      "BLUE": "#92B7FF",
+      "VIOLET": "#D692FF",
+      "PINK": "#FF92DA",
+      "RED": "#FF9292"
+    },
+    "PRIMARY": "#000",
+    "SECONDARY": "#AFAFAF",
+    "BACKGROUND": "#FFFFFF"
+  }
+}

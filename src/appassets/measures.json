@@ -1,0 +1,28 @@
+{
+  "CARD": {
+    "RADIUS": 25,
+    "PADDING": 10,
+    "ELEVATION": 4
+  },
+  "MODAL": {
+    "RADIUS": 25,
+    "PADDING": 10,
+    "ELEVATION": 6
+  },
+  "BUTTON": {
+    "RADIUS": 10,
+    "ELEVATION": 2
+  },
+  "ITEM": {
+    "RADIUS": 15,
+    "ELEVATION": 2,
+    "PADDING": 10 
+  },
+  "VIEW": {
+    "PADDING": 15
+  },
+  "INPUT": {
+    "RADIUS": 5,
+    "BORDER": 1
+  }
+}
