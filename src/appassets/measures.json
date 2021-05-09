@@ -11,7 +11,8 @@
   },
   "BUTTON": {
     "RADIUS": 10,
-    "ELEVATION": 2
+    "ELEVATION": 2,
+    "PADDING": 10
   },
   "ITEM": {
     "RADIUS": 15,

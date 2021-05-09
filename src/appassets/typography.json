@@ -6,5 +6,9 @@
   "ITEM": {
     "SIZE": 12,
     "WEIGHT": "bold"
+  },
+  "BUTTON": {
+    "SIZE": 15,
+    "WEIGHT": "bold"
   }
 }

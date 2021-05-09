@@ -4,10 +4,10 @@ import {Container} from './styles';
 
 import useTheme from '../../Hooks/useTheme';
 
-export default Fab = ({children}) => {
+export default Fab = ({children, onPress}) => {
   const theme = useTheme();
   return (
-    <Container {...theme}>
+    <Container {...{onPress}} {...theme}>
       {children}
     </Container>
   );

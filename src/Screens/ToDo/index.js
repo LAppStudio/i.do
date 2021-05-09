@@ -5,6 +5,8 @@ import FloatingNav from '../../Components/FloatingNav';
 import Frame from '../../Components/Frame';
 import ListItem from '../../Components/ListItem';
 import ConnectedList from './connectedList';
+import Modal from '../../Components/Modal';
+import ToDoForm from './components/ToDoForm';
 
 const RenderItem = (props) => <ListItem type='todo' {...props}  />;
 
@@ -15,15 +17,29 @@ class ToDo extends React.Component {
     super(props);
     this.state = {
       floatingNavVisible: true,
+      modalVisible: false,
     }
   }
 
+  handleShowModal = () => this.setState({modalVisible: true}, 
+    () => {this.setState({floatingNavVisible: false});});
+
+  handleHideModal = () => this.setState({modalVisible: false}, 
+    () => {this.setState({floatingNavVisible: true});});
+
+  handleSubmit = () => {
+    this.handleHideModal();
+  }
+
   render() {
-    const {floatingNavVisible} = this.state;
+    const {floatingNavVisible, modalVisible} = this.state;
     return(
       <Frame>
         <ConnectedList type='simple-todo' renderItem={RenderItem} {...{keyExtractor}}/>
-        <FloatingNav visible={floatingNavVisible} />
+        <FloatingNav onPlus={this.handleShowModal} visible={floatingNavVisible} />
+        <Modal visible={modalVisible}>
+          <ToDoForm onSubmit={this.handleSubmit} />
+        </Modal>
       </Frame>
     )
   }
