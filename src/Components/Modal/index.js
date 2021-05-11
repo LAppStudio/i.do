@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import {Animated} from 'react-native';
-import debounced from '../../utils/debounce';
 
 const {View, Value} = Animated;
 

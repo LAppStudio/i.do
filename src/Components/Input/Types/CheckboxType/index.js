@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-import {Animated, TouchableOpacity} from 'react-native';
+import {Animated} from 'react-native';
 
 import styled from 'styled-components/native';
 
@@ -25,7 +25,6 @@ function Checkbox({checked = false, theme, onChange = () => {}}) {
   useEffect(() => {
     handleCheck(value);
     transition(value ? 1 : 0);
-    
   }, [value]);
 
   return(

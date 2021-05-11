@@ -17,7 +17,7 @@ const Container = styled.View`
   flex-direction: column;
   width: 100%;
   max-height: 100%;
-  min-height: 40%;
+  min-height: 30%;
 
   padding: ${({measures: {CARD}}) => CARD.PADDING}px;
   border-radius: ${({measures: {CARD}}) => CARD.RADIUS}px;

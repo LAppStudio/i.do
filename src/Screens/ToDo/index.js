@@ -27,7 +27,11 @@ class ToDo extends React.Component {
   handleHideModal = () => this.setState({modalVisible: false}, 
     () => {this.setState({floatingNavVisible: true});});
 
-  handleSubmit = () => {
+  handleSubmit = (forms) => {
+    this.handleHideModal();
+  }
+
+  handleDismiss = () => {
     this.handleHideModal();
   }
 
@@ -38,7 +42,7 @@ class ToDo extends React.Component {
         <ConnectedList type='simple-todo' renderItem={RenderItem} {...{keyExtractor}}/>
         <FloatingNav onPlus={this.handleShowModal} visible={floatingNavVisible} />
         <Modal visible={modalVisible}>
-          <ToDoForm onSubmit={this.handleSubmit} />
+          <ToDoForm onSubmit={this.handleSubmit} onDismiss={this.handleDismiss} />
         </Modal>
       </Frame>
     )

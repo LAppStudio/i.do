@@ -27,7 +27,7 @@ const ItemContainer = styled.View`
   display: flex;
   flex: 1;
   width: 100%;
-  padding-horizontal: 15px;
+  padding-horizontal: 20px;
 `;
 
 const ItemSeparatorComponent = styled.View`

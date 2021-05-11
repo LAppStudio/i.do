@@ -10,5 +10,9 @@
   "BUTTON": {
     "SIZE": 15,
     "WEIGHT": "bold"
+  },
+  "INPUT": {
+    "SIZE": 12,
+    "WEIGHT": "bold"
   }
 }
