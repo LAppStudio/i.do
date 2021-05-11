@@ -6,12 +6,15 @@ import Button from '../../../../Components/Button';
 import ColorSelector from '../../../../Components/ColorSelector';
 import Input from '../../../../Components/Input';
 
+import useTheme from '../../../../Hooks/useTheme';
+
 const INITIAL_VALUE = {
   title: '',
   color: 'WHITE',
 };
 
 function ToDoForm({onSubmit, onDismiss}) {
+  const {colors} = useTheme();
   const [forms, setForms] = useState(INITIAL_VALUE);
 
   const handleFormsChange = (key, value) => {
@@ -36,10 +39,10 @@ function ToDoForm({onSubmit, onDismiss}) {
           </InputSection>
           <BottomContainer>
             <CancelView>
-              <Button onPress={onDismiss} title='CANCEL' backgroundColor='#000' textColor='#fff' />
+              <Button onPress={onDismiss} title='CANCEL' />
             </CancelView>
             <SubmitView>
-              <Button onPress={handleSubmit} title='CREATE' />
+              <Button onPress={handleSubmit} title='CREATE' backgroundColor={colors.PRIMARY} textColor={colors.BACKGROUND} />
             </SubmitView>
           </BottomContainer>
         </Content>

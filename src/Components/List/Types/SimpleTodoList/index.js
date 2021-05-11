@@ -24,8 +24,6 @@ export default function SimpleTodoList({data = [], renderItem: RenderItem = () =
 
 
 const ItemContainer = styled.View`
-  display: flex;
-  flex: 1;
   width: 100%;
   padding-horizontal: 20px;
 `;
@@ -37,5 +35,7 @@ const ItemSeparatorComponent = styled.View`
 const List = styled.FlatList.attrs({
   ItemSeparatorComponent
 })`
-  padding-vertical: 20px;
+  flex: 1;
+  padding-top: 20px;
+  flex-shrink: 0;
 `;

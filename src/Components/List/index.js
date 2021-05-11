@@ -3,9 +3,8 @@ import useTheme from '../../Hooks/useTheme';
 
 import Types from './Types';
 
-function List({type = '', ...props}) {
+function List({type = '', loading, ...props}) {
   const theme = useTheme();
-
   const RenderItem = Types[type] ?? Types.default;
 
   return <RenderItem {...props} {...{theme}} />;

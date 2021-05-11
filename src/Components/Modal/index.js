@@ -9,15 +9,15 @@ function Modal({visible = false, children}) {
   const translateY = useRef(new Value(0)).current;
   const opacity = useRef(new Value(0)).current;
   const timingRef = useRef(null);
-
-  const transition = (toValue, animation) => 
-    Animated.timing(animation, {toValue, useNativeDriver: true, duration: 300}).start(); 
+  
+  const transition = (values = {}) => 
+    Animated.parallel([
+      Animated.timing(opacity, {toValue: values.opacity, useNativeDriver: true, duration: 250}),
+      Animated.timing(translateY, {toValue: values.translateY, useNativeDriver: true, duration: 400}),
+    ]).start();
 
   const handleAnimate = useCallback(() => {
-    transition(visible ? 1 : 0, opacity);
-    timingRef.current = setTimeout(() => {
-      transition(visible ? 0 : 1000, translateY);
-    }, 100)
+    transition({opacity: visible ? 1 : 0, translateY: visible ? 0 : 1000})
   }, [visible]);
 
 

@@ -25,7 +25,6 @@ const Container = styled.View`
 
 
   background-color: ${({colors: {BACKGROUND}}) => BACKGROUND};
-
 `;
 
 export default Card;

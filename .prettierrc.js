@@ -1,6 +1,6 @@
 module.exports = {
-  "usePrettierrc": false,
-  bracketSpacing: false,
+  "usePrettierrc": true,
+  bracketSpacing: true,
   jsxBracketSameLine: false,
   singleQuote: false,
   trailingComma: 'all',

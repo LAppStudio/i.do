@@ -1,10 +1,18 @@
 import List from '../../Components/List';
 import {connect} from 'react-redux';
+import {Selectors} from './redux/reducer';
 
-import {items} from '../../mocks/todo.json';
+const getList = state => {
+  const data = Selectors.items(state);
+
+  console.log('items', data);
+
+  return data;
+}
 
 const mapStateToProps = state => ({
-  data: items,
+  data: getList(state),
+  loading: Selectors.loading(state)
 });
 
 export default connect(mapStateToProps)(List);
